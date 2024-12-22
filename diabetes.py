@@ -38,11 +38,12 @@ if st.button('Prediksi'):
         
         prediction = model.predict(input_data)
         probability = model.predict_proba(input_data)[0][1]  # Probabilitas kelas positif (1)
-        
+        probability_no_diabetes = (1 - probability) * 100  # Probabilitas untuk tidak menderita diabetes
+
         # Display results
         if prediction[0] == 1:
             st.error(f"Hasil: Anda kemungkinan menderita diabetes dengan probabilitas {probability * 100:.2f}%.")
         else:
-            st.success(f"Hasil: Anda kemungkinan besar tidak menderita diabetes dengan probabilitas {probability * 100:.2f}%.")
+            st.success(f"Hasil: Anda kemungkinan besar tidak menderita diabetes dengan probabilitas {probability_no_diabetes:.2f}%.")
     except Exception as e:
         st.error(f"Terjadi kesalahan: {e}")
