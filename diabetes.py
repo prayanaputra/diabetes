@@ -41,8 +41,8 @@ if st.button('Prediksi'):
         
         # Display results
         if prediction[0] == 1:
-    st.error(f"Hasil: Anda kemungkinan menderita diabetes dengan probabilitas {probability * 100:.2f}%.")
-else:
-    st.success(f"Hasil: Anda kemungkinan besar tidak menderita diabetes dengan probabilitas {probability * 100:.2f}%.")
+            st.error(f"Hasil: Anda kemungkinan menderita diabetes dengan probabilitas {probability * 100:.2f}%.")
+        else:
+            st.success(f"Hasil: Anda kemungkinan besar tidak menderita diabetes dengan probabilitas {probability * 100:.2f}%.")
     except Exception as e:
         st.error(f"Terjadi kesalahan: {e}")
