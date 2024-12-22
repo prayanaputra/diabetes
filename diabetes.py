@@ -16,7 +16,7 @@ Silakan isi data di bawah ini untuk mendapatkan hasil prediksi.
 # Create a function to get user input
 def get_user_input():
     features = {
-        'Pregnancies': st.number_input('Pregnancies', min_value=0.0, value=1.0, step=1.0)
+        'Pregnancies': st.number_input('Pregnancies', min_value=0.0, value=1.0, step=1.0),
         'Glucose': st.number_input('Glucose', min_value=0.0, value=100.0, step=1.0),
         'Blood Pressure': st.number_input('Blood Pressure', min_value=0.0, value=80.0, step=1.0),
         'Skin Thickness': st.number_input('Skin Thickness', min_value=0.0, value=20.0, step=1.0),
